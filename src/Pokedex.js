@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Pokecard from './Pokecard';
+import './Pokedex.css'
 
 class Pokedex extends Component{
     render(){
@@ -12,13 +13,16 @@ class Pokedex extends Component{
             {id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95},
             {id: 94, name: 'Gengar', type: 'poison', base_experience: 225},
             {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
-          ]  
+          ]
         return (
             pokemonList.map(pokemon => (
-                                <Pokecard name={pokemon.name} 
-                                          img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" 
-                                          type= {pokemon.type}                                  
-                                                />))
+                                <div className= "Pokedex"> 
+                                    <Pokecard name={pokemon.name} 
+                                             img ={ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id +'.png' }
+                                             type= {pokemon.type}    
+                                             base_experience= {pokemon.base_experience}                              
+                                    />
+                                </div>))
         )
     }
 }
