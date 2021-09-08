@@ -16,20 +16,26 @@ class Pokedex extends Component{
           ]
     }
     render(){
-
-
-        
         return (
             <div className="Pokedex">
                 {this.props.pokemonList.map(pokemon => (
                                         <Pokecard name={pokemon.name} 
-                                                img ={ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id +'.png' }
+                                                img ={ "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + this.convertID(pokemon.id) +'.png' }
                                                 type= {pokemon.type}    
                                                 base_experience= {pokemon.base_experience}                              
                                         />
                                 ))}
             </div>
         )
+    }
+
+
+    convertID(id){
+        id= id.toString();
+        while(id.length<3){
+            id= "0"+id
+        }
+        return id;
     }
 }
 

@@ -1,6 +1,6 @@
 .Pokecard{
- height: 250px;
- width: 170px;
+ height: 450px;
+ width: 200px;
  background-color: darkgray;
  text-align: center;
  margin: 75px;
@@ -8,6 +8,6 @@
 }
 
 .Pokecard-title{
-    color: blue;
-    padding: 0.5rem;
+color: blue;
+padding: 0.5rem;
 }
