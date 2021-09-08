@@ -1,8 +1,10 @@
 .Pokecard{
  height: 250px;
- width: 150px;
+ width: 170px;
  background-color: darkgray;
  text-align: center;
+ margin: 75px;
+ margin-top: 0px;
 }
 
 .Pokecard-title{
